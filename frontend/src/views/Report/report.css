@@ -1,0 +1,20 @@
+.report {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.report__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+  .app .ant-layout-sider,
+  .report__header {
+    display: none;
+  }
+}

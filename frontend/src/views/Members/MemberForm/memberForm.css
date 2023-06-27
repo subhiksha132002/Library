@@ -1,0 +1,12 @@
+.member-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.member-form__footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

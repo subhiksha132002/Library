@@ -1,0 +1,14 @@
+.m-0 {
+  margin: 0;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.books__search {
+  align-self: flex-start;
+  width: auto;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "library-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "concurrently": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "concurrently -k \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/index.js",
+    "client": "npm run start --prefix frontend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

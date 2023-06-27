@@ -1,0 +1,24 @@
+.app {
+  min-height: 100vh;
+}
+
+.text-danger {
+  color: red;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.link {
+  cursor: pointer;
+  color: #0000ee;
+}
+.disabled {
+  cursor: not-allowed;
+  color: #9c9c9c;
+}

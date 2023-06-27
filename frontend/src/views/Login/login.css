@@ -1,0 +1,28 @@
+.login {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    45deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 20, 121, 1) 10%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.login__form {
+  min-width: 350px;
+  display: flex;
+}
+
+.login__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
