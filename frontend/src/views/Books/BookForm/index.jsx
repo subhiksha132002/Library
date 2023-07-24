@@ -26,7 +26,7 @@ const BookForm = ({ onSubmit, book = {}, onCancel }) => {
           <Form className="member-form">
             <Input name="title" label="Title" />
             <Input name="author" label="Author" />
-            <Input name="edition" label="Edition" />
+            <Input name="edition" label="Cupboard Number" />
             <Input name="count" label="Availability" type="number" />
             <div className="member-form__footer">
               <Button htmlType="reset" onClick={onCancel}>

@@ -10,7 +10,7 @@ const generateColumns = (handleEdit, handleDelete, user, onBookRequest) => [
     dataIndex: "author",
   },
   {
-    title: "Edition",
+    title: "Cupboard Number",
     dataIndex: "edition",
   },
   {

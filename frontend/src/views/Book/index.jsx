@@ -55,7 +55,7 @@ const Book = ({}) => {
     <div className="book">
       {book && (
         <h1 className="m-0">
-          {book?.title} by {book?.author} ({book?.edition})
+          {book?.title} by {book?.author}
         </h1>
       )}
       <Tabs items={tabs} />

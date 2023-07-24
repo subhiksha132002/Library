@@ -47,10 +47,6 @@ const Report = ({}) => {
             dataIndex: "author",
           },
           {
-            title: "Edition",
-            dataIndex: "edition",
-          },
-          {
             title: "Issue To",
             dataIndex: ["issued", "member", "name"],
           },
