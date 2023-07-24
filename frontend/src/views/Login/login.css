@@ -5,7 +5,7 @@
   color: #fff;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  justify-content: center;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     45deg,
@@ -25,7 +25,4 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-}
-::-webkit-scrollbar {
-  display: none;
 }
