@@ -12,21 +12,25 @@ const generateColumns = (handleEdit, handleDelete, user, onBookRequest) => [
   {
     title: "Cupboard Number",
     dataIndex: "edition",
+    align: "center",
   },
   {
     title: "Availability",
     dataIndex: "count",
+    align: "center",
   },
   ...(user?.type === "admin"
     ? [
         {
           title: "Requests",
           dataIndex: "requested",
+          align: "center",
           render: (requested) => requested?.length,
         },
         {
           title: "Issued",
           dataIndex: "issuedTo",
+          align: "center",
           render: (issuedTo) => issuedTo?.length,
         },
         {
