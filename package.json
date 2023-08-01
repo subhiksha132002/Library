@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
+    "bcrypt": "^5.1.0",
     "concurrently": "^8.0.1"
   },
   "devDependencies": {

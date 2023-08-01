@@ -39,10 +39,14 @@ const MemberForm = ({ member = { type: "student" }, onSubmit, onCancel }) => {
               },
             ]}
           />
-          <Input name="name" label="Name" />
-          <Input name="email" label="Email" />
-          <Input name="phone" label="Phone Number" />
-          <Input name="registerNumber" label="Register Number" />
+          <Input name="name" label="Name" autocomplete="off" />
+          <Input name="email" label="Email" autocomplete="off" />
+          <Input name="phone" label="Phone Number" autocomplete="off" />
+          <Input
+            name="registerNumber"
+            label="Register Number"
+            autocomplete="off"
+          />
           <div className="member-form__footer">
             <Button htmlType="reset" onClick={onCancel}>
               Cancel

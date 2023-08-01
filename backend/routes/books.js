@@ -13,10 +13,9 @@ router.get("/", async (req, res) => {
       },
     }));
 
-    const books = await Book.find({ $or: fieldsToSearch }).populate([
-      "issuedTo.member",
-      "requested.member",
-    ]);
+    const books = await Book.find({ $or: fieldsToSearch })
+      .populate(["issuedTo.member", "requested.member"])
+      .sort({ "requested.requestedOn": -1, title: 1 });
 
     res.status(200).json(books);
   } catch (ex) {

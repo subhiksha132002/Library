@@ -25,9 +25,14 @@ const Login = () => {
           validationSchema={loginValidation}
         >
           {() => (
-            <Form>
-              <Input name="email" label="Email" />
-              <Input name="password" label="Password" type="password" />
+            <Form autoComplete="off">
+              <Input name="email" label="Email" autoComplete="off" />
+              <Input
+                name="password"
+                label="Password"
+                type="password"
+                autoComplete="off"
+              />
               <Button type="primary" htmlType="submit">
                 Login
               </Button>
