@@ -1,0 +1,11 @@
+.delete-book {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.delete-book__buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}

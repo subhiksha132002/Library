@@ -22,6 +22,15 @@ const requestedBookSchema = mongoose.Schema({
   },
 });
 
+const deleteSchema = mongoose.Schema({
+  member: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Member",
+  },
+  reason: String,
+  deletedAt: { type: Date, default: new Date() },
+});
+
 const bookSchema = new mongoose.Schema({
   author: { type: String },
   count: { type: Number },
@@ -30,6 +39,7 @@ const bookSchema = new mongoose.Schema({
   title: { type: String },
   issuedTo: [issuedToSchema],
   requested: [requestedBookSchema],
+  deleteReason: { type: deleteSchema, default: null },
 });
 
 const Book = mongoose.model("Book", bookSchema);

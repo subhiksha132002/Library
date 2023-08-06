@@ -9,5 +9,5 @@ export default Yup.object().shape({
     .max(10)
     .required()
     .label("Register Number"),
-  type: Yup.string().oneOf(["staff", "student"]).required().label("Type"),
+  type: Yup.string().oneOf(["staff", "student"]).default("staff").label("Type"),
 });

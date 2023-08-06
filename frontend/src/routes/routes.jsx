@@ -6,6 +6,7 @@ import Home from "../views/Home";
 import { Navigate } from "react-router";
 import Book from "../views/Book";
 import Report from "../views/Report";
+import Analytics from "../views/Analytics";
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
       {
         pathname: "/report",
         element: <Report />,
+        children: [],
+      },
+      {
+        pathname: "/analytics",
+        element: <Analytics />,
         children: [],
       },
     ],

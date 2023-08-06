@@ -1,5 +1,6 @@
 import {
   AreaChartOutlined,
+  BarChartOutlined,
   BookOutlined,
   LogoutOutlined,
   UserOutlined,
@@ -28,6 +29,11 @@ const getMenus = (user) => {
         key: "/report",
         label: "Reports",
         icon: <AreaChartOutlined />,
+      },
+      {
+        key: "/analytics",
+        label: "Analytics",
+        icon: <BarChartOutlined />,
       },
     ];
 

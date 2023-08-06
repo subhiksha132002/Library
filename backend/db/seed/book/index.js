@@ -4,13 +4,13 @@ const Book = require("../../../model/bookSchema");
 const populateBooks = async () => {
   const mappedBooks = new Map();
 
-  books.forEach(({ Book_name, Author, Cupboard_no, Availability }) => {
+  books.forEach(({ Book_name, Author, Access_no, Availability }) => {
     const existingBooks = mappedBooks.get(Book_name)?.count || 0;
 
-    mappedBooks.set(Book_name, {
+    mappedBooks.set(Access_no, {
       title: Book_name,
       author: Author,
-      edition: Cupboard_no,
+      edition: Access_no,
       count: existingBooks + Number(Availability === "YES"),
     });
   });

@@ -141,7 +141,7 @@ export const BookService = () => {
     try {
       setBookLoading(true);
 
-      await axiosInstance.delete(`${ApiRoutes.BOOKS}/${book?._id}`);
+      await axiosInstance.put(`${ApiRoutes.BOOKS}/${book?._id}`, { book });
 
       setBooks((books) =>
         books?.filter((existingBook) => existingBook?._id !== book?._id)

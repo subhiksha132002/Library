@@ -63,7 +63,7 @@ export const Members = () => {
     },
     {
       key: "2",
-      label: "Staff",
+      label: "Staff Details",
       children: (
         <Table
           rowKey="_id"
@@ -88,7 +88,15 @@ export const Members = () => {
           <h1>Members</h1>
           <PlusCircleOutlined onClick={openMemberForm} />
         </Space>
-        <Tabs items={items} />
+        <Table
+          rowKey="_id"
+          columns={generateColumns(handleEdit, handleDelete)}
+          loading={loading}
+          dataSource={members?.filter((member) => member?.type === "staff")}
+          pagination={{
+            hideOnSinglePage: true,
+          }}
+        />
       </div>
       <Drawer
         destroyOnClose

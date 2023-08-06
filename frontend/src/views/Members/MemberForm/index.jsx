@@ -1,14 +1,13 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import Input from "../../../shared/Input";
-import Dropdown from "../../../shared/Dropdown";
 import { Button } from "antd";
 import { MemberService } from "../../../service/MemberService/member.service";
 import validationSchema from "./memberForm.validation";
 
 import "./memberForm.css";
 
-const MemberForm = ({ member = { type: "student" }, onSubmit, onCancel }) => {
+const MemberForm = ({ member = { type: "staff" }, onSubmit, onCancel }) => {
   const { addMember, updateMember } = MemberService();
 
   const handleSubmit = async (member) => {
@@ -25,20 +24,6 @@ const MemberForm = ({ member = { type: "student" }, onSubmit, onCancel }) => {
     >
       {({ isSubmitting }) => (
         <Form className="member-form">
-          <Dropdown
-            name="type"
-            label="Member Type"
-            options={[
-              {
-                label: "Staff",
-                value: "staff",
-              },
-              {
-                label: "Student",
-                value: "student",
-              },
-            ]}
-          />
           <Input name="name" label="Name" autocomplete="off" />
           <Input name="email" label="Email" autocomplete="off" />
           <Input name="phone" label="Phone Number" autocomplete="off" />

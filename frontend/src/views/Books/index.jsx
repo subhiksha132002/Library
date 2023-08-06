@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BookService } from "../../service/BookService/book.service";
-import { Drawer, Modal, Space, Table } from "antd";
+import { Drawer, Input, Modal, Space, Table } from "antd";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import generateColumns from "./columns";
 import BookForm from "./BookForm";
@@ -8,6 +8,7 @@ import debounce from "lodash.debounce";
 import Search from "antd/es/input/Search";
 import { generatePath, useNavigate } from "react-router";
 import UserContext from "../../Context/UserContext";
+import DeleteBook from "./DeleteBook";
 
 import "./books.css";
 
@@ -22,6 +23,8 @@ export const Books = () => {
   const [isBookFormVisible, setIsBookFormVisible] = useState(false);
 
   const [chosenBook, setChosenBook] = useState();
+
+  const [chosenBookToDelete, setChosenBookToDelete] = useState();
 
   const [filters, setFilters] = useState();
 
@@ -54,16 +57,7 @@ export const Books = () => {
   };
 
   const handleDelete = (book) => {
-    if (!book) return;
-
-    Modal.confirm({
-      cancelText: "Cancel",
-      centered: true,
-      okText: "Delete",
-      onOk: async () => deleteBook(book),
-      title: `Are you sure. You want to delete ${book.title}?`,
-      type: "confirm",
-    });
+    setChosenBookToDelete(book);
   };
 
   useEffect(() => {
@@ -86,7 +80,7 @@ export const Books = () => {
           rowKey="_id"
           columns={generateColumns(
             handleEdit,
-            handleDelete,
+            setChosenBookToDelete,
             user,
             handleBookRequest
           )}
@@ -119,6 +113,18 @@ export const Books = () => {
           book={chosenBook}
         />
       </Drawer>
+      <Modal
+        destroyOnClose
+        open={!!chosenBookToDelete?._id}
+        closable={false}
+        footer={false}
+      >
+        <DeleteBook
+          book={chosenBookToDelete}
+          onDelete={deleteBook}
+          onCancel={() => setChosenBookToDelete(undefined)}
+        />
+      </Modal>
     </>
   );
 };
