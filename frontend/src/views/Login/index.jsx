@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h1 className="text-white">Welcome to Anna University Library</h1>
+      <h1 className="text-white">Welcome to Mathematics Department Library</h1>
       <div className="login__form">
         <Formik
           initialValues={initialValues}

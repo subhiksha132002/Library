@@ -5,4 +5,5 @@ export const ApiRoutes = {
   ISSUE_BOOK: "/books/:id/issue",
   RETURN_BOOK: "/books/:id/return",
   MEMBERS: "/members",
+  UPLOAD: "/books/upload",
 };

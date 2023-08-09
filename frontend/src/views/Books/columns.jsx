@@ -2,17 +2,18 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 
 const generateColumns = (handleEdit, handleDelete, user, onBookRequest) => [
   {
+    title: "Access No",
+    dataIndex: "edition",
+    align: "center",
+  },
+  {
     title: "Title",
     dataIndex: "title",
+    align: "center",
   },
   {
     title: "Author",
     dataIndex: "author",
-  },
-  {
-    title: "Access Number",
-    dataIndex: "edition",
-    align: "center",
   },
   {
     title: "Availability",

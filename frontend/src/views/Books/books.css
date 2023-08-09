@@ -12,3 +12,8 @@
   align-self: flex-start;
   width: auto;
 }
+
+/* Container for Upload button */
+.btn {
+  margin-right: 106px;
+}
